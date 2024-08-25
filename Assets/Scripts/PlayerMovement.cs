@@ -41,6 +41,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
+
+        if (transform.position.y <= -5)
+        {
+            Debug.Log("Dead!");
+            transform.position = new Vector2(-9.053f, -3.4f);
+        }
     }
 
     bool IsGrounded()
