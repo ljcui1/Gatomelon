@@ -28,6 +28,15 @@ public class PlayerMovement : MonoBehaviour
         dir = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dir * moveSpeed, rb.velocity.y);
 
+        if (dir > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        if (dir < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
