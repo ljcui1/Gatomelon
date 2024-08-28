@@ -29,7 +29,7 @@ public class PlayerStateMachine : AbstractFiniteStateMachine
         }
         public override void OnUpdate()
         {
-            // if(GetStateMachine<PlayerStateMachine>().Manager.walign) {
+            // if(GetStateMachine<PlayerStateMachine>().Manager.walking) {
             //      TransitionToState(PlayerFSM.WALK);
             // }
         }
