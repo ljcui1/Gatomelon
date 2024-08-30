@@ -21,5 +21,10 @@ public class CamBehavior : MonoBehaviour
         {
             cam.transform.position = new Vector3(player.transform.position.x, 0, -10);
         }
+        if (player.transform.position.y <= -5)
+        {
+            
+            cam.transform.position = new Vector3(-0.93f, 0, -10);
+        }
     }
 }
